@@ -1,0 +1,227 @@
+.special_projects_container {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.sub_heading {
+    font-size: 2em;
+    color: #db191f;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+}
+
+.special_projects_title {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: -16px;
+}
+
+.projects_layout {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.first_col {
+    flex: 1;
+}
+
+.second_col {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.project_card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 16px;
+    box-shadow: 0 8px 8px #02010133;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 250px;
+    width: 100%;
+}
+
+.project_card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.project_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.hover_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #07072dcc;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.project_card:hover .hover_overlay {
+    opacity: 1;
+}
+
+.hover_overlay h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.hover_overlay p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.view_more_btn {
+    background: white;
+    color: rgba(7, 7, 45, 0.8);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.view_more_btn:hover {
+    background: #db191f;
+    color: white;
+}
+
+/* Tablet and larger screens */
+@media (min-width: 768px) {
+    .special_projects_container {
+        padding: 40px;
+    }
+
+    .special_projects_title {
+        font-size: 5rem;
+        margin-bottom: 30px;
+    }
+
+    .projects_layout {
+        gap: 30px;
+    }
+
+    .hover_overlay h4 {
+        font-size: 1.75rem;
+    }
+
+    .hover_overlay p {
+        font-size: 1.25rem;
+    }
+
+    .view_more_btn {
+        font-size: 1.25rem;
+        padding: 12px 24px;
+    }
+
+    .project_card{
+        width: 450px;
+    }
+
+}
+
+/* Large screens */
+@media (min-width: 1024px) {
+    .special_projects_container {
+        padding: 60px;
+    }
+
+    .special_projects_title {
+        font-size: 4rem;
+        margin-bottom: 40px;
+    }
+
+    .projects_layout {
+        gap: 40px;
+    }
+
+    .hover_overlay h4 {
+        font-size: 2rem;
+    }
+
+    .hover_overlay p {
+        font-size: 1.5rem;
+    }
+
+    .view_more_btn {
+        font-size: 1.5rem;
+        padding: 14px 28px;
+    }
+
+    .project_card{
+        width: 450px;
+    }
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .special_projects_container {
+        padding: 15px;
+    }
+
+    .sub_heading {
+        font-size: 1.75em; /* Increased size to match testimonials for mobile */
+    }
+
+    .special_projects_title {
+        font-size: 1.25em; /* Adjusted size for mobile emphasis */
+        margin-bottom: 20px;
+    }
+
+    .projects_layout {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .first_col,
+    .second_col {
+        flex: 1 1 100%;
+    }
+
+    .second_col {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .hover_overlay h4 {
+        font-size: 1.25rem; /* Adjusted heading size for hover overlay */
+    }
+
+    .hover_overlay p {
+        font-size: 0.875rem; /* Adjusted text size for hover overlay */
+    }
+
+    .view_more_btn {
+        font-size: 0.875rem; /* Compact button for mobile */
+        padding: 8px 16px; /* Compact padding for mobile */
+    }
+
+    .project_card{
+        /*width: 300px;*/
+    }
+}

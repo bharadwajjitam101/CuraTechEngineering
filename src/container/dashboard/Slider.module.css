@@ -1,0 +1,177 @@
+html,
+body {
+    padding: 0;
+    margin: 40;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.sliderContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carouselSlide {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    text-align: center;
+    background-size: cover;
+    position: relative;
+}
+
+.carouselSlide1 {
+    background: url("../../../src/assets/L6.webp") no-repeat center center;
+}
+
+.carouselSlide2 {
+    background: url("../../../src/assets/L21.webp") no-repeat center center;
+}
+
+.carouselSlide3 {
+    background: url("../../../src/assets/L4.webp") no-repeat center center;
+}
+
+
+.carouselSlide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(175, 174, 174, 0.099);
+    z-index: 1;
+}
+
+.carouselSlide > * {
+    position: relative;
+    z-index: 2;
+}
+
+.heading {
+    width: 70%;
+    font-size: 45px;
+    color: #fff;
+    margin: 0 auto 20px;
+    font-weight: bolder;
+    line-height: 1.6;
+    display: flex !important;
+    text-align: left;
+    font-family: 'Josh', sans-serif;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+}
+
+.description {
+    width: 70%;
+    font-size: 16px;
+    color: #fff;
+    margin: 0 auto 20px;
+    font-weight: bold;
+    line-height: 1.8;
+    display: flex !important;
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+.buttonContainer {
+    width: 70%;
+    font-size: 16px;
+    color: #fff;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+    display: flex !important;
+    text-align: center;
+}
+
+.actionContainer {
+    width: 70%;
+    font-size: 16px;
+    color: #fff;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+    display: flex !important;
+    text-align: center;
+}
+
+.Button {
+    background-color: #001d52;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.2s ease;
+    font-size: 1rem;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.Button:hover {
+    background-color: #db191f;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+.FloatingContainer {
+    display: flex;
+    justify-content: center;
+    margin-left: 24vw;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .carouselSlide {
+        height: 70vh;
+        padding: 15px;
+        background-size: cover;
+    }
+
+    .heading {
+        width: 90%; /* Adjusted for mobile */
+        font-size: 22px; /* Smaller font */
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .description {
+        width: 90%; /* Adjusted for mobile */
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 10px;
+        line-height: 1.5;
+    }
+
+    .actionContainer {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .Button {
+        width: auto;
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    .FloatingContainer {
+        flex-direction: column; /* Stack items vertically */
+        justify-content: flex-start;
+        align-items: center;
+        gap: 135px; /* Add spacing */
+        margin-left: 0; /* Center-align for mobile */
+        margin-top: 10px;
+    }
+
+    .FloatingContainer > * {
+        width: 90%; /* Restrict width for mobile */
+        max-width: 90%;
+        text-align: center;
+    }
+}

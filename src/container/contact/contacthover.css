@@ -1,0 +1,144 @@
+/* Desktop View */
+.social-contact {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px 0 0 10px;
+    box-shadow: -8px 0 20px rgba(0, 0, 0, 0.3),
+    -4px 0 12px rgba(0, 0, 0, 0.2),
+    0 0 30px rgba(0, 29, 82, 0.2),
+    inset -2px 0 8px rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+    user-select: none;
+    cursor: pointer;
+    position: relative; /* Ensure proper positioning for labels */
+}
+
+.social-contact-right {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 10px 0 0 10px;
+}
+
+.social-contact-left {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 0 10px 10px 0;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+}
+
+.icon-label {
+    position: absolute;
+    background-color: #001d52;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: -4px 4px 15px rgba(0, 0, 0, 0.3),
+    -2px 2px 8px rgba(0, 0, 0, 0.2),
+    0 0 20px rgba(0, 29, 82, 0.2),
+    inset -1px 1px 4px rgba(255, 255, 255, 0.1);
+}
+
+.social-contact-right .icon-label {
+    right: 100%;
+    transform: translateX(10px);
+}
+
+.social-contact-left .icon-label {
+    left: 100%;
+    transform: translateX(-10px);
+}
+
+.social-icon:hover {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.social-icon:hover .icon-label {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.social-contact-right .social-icon:hover {
+    /*transform: translateX(-5px);*/
+}
+
+.social-contact-left .social-icon:hover {
+    /*transform: translateX(5px);*/
+}
+
+/* Draggable functionality for desktop and mobile */
+@media (max-width: 1024px) {
+    .social-contact {
+        cursor: pointer; /* Enables dragging and interaction */
+        touch-action: pan-y; /* Enables vertical panning for dragging */
+    }
+
+    .social-contact.active .icon-label {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .social-contact.active .social-icon {
+        transform: translateX(0);
+    }
+
+    .social-contact.active .social-contact-right {
+        /*right: -10px; !* Adjusts for fully visible contact *!*/
+    }
+
+    .social-contact.active .social-contact-left {
+        /*left: -10px; !* Adjusts for fully visible contact *!*/
+    }
+}
+
+/* Mobile View */
+@media (max-width: 767px) {
+    .social-contact {
+        /*width: 50px; !* Slightly reduced width for mobile *!*/
+        /*padding: 8px;*/
+    }
+
+    .social-icon {
+        font-size: 1.25rem; /* Smaller hover icon on mobile */
+        width: 35px; /* Adjusted size for smaller mobile screens */
+    }
+
+    .icon-label {
+        font-size: 0.75rem; /* Smaller label font size for mobile */
+    }
+
+    .social-contact.active .icon-label {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.instagram {
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+}

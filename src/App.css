@@ -1,0 +1,29 @@
+/* Import fonts */
+@font-face {
+    font-family: 'Poppins';
+    src: url('/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Josh';
+    src: url('/Jost-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Apply fonts globally */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff; /* Optional: Customize as needed */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Josh', sans-serif;
+}

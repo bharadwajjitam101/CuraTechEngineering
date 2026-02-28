@@ -1,0 +1,162 @@
+.heroSection {
+    position: relative;
+    min-height: 70vh;
+    background-image: url("../../assets/AboutHero.svg?height=1080&width=1920");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    color: white;
+
+
+}
+.heroSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.heroContent {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    z-index: 1;
+    padding-bottom: 10%;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cardsContainer {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 2rem;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+}
+
+.cardNumber {
+    background-color: #dc2626;
+    color: white;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.cardContent {
+    text-align: left;
+}
+
+.cardTitle {
+    color: #111827;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.cardDescription {
+    color: #6b7280;
+    font-size: 1rem;
+}
+.buttonContainer {
+    margin-top: 20px;
+    }
+   
+.slideButton {
+    background-color: #dc2626;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+   font-weight: 600;
+   transition: background-color 0.3s ease, transform 0.2s;
+   text-transform: uppercase;
+   box-shadow: 0 4px 6px rgba(90, 90, 90, 0.3);
+    }
+   
+.blink-once {
+   animation: blink 0.5s;
+   }
+   .slideButton:hover {
+   background-color: #001d52;
+   transform: translateY(-2px);
+   
+   box-shadow: 0 6px 8px rgba(112, 92, 92, 0.4);
+   }
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .cardsContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1.25rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+}

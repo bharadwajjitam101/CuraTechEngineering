@@ -1,0 +1,20 @@
+[
+  {
+      "heading": "Complete engineering solutions under one roof",
+      "description": "Your Partner in engineering excellence, Cura tech engineering delivers innovative, affordable, and reliable solutions for civil and mechanical needs.",
+      "buttonText": "Learn More",
+      "route": ""
+  },
+  {
+      "heading": "Civil engineering services",
+      "description": "Cura Tech offers end-to-end civil engineering solutions, including design, construction, interiors, and turnkey services with quality and affordability",
+      "buttonText": "Learn More",
+      "route": "/civil-archive"
+  },
+  {
+      "heading": "Mechanical engineering services",
+      "description": "Cura Tech delivers comprehensive mechanical engineering solutions, specializing in firefighting systems, industrial piping, equipment erection, and structural work.",
+      "buttonText": "Learn More",
+      "route": "/mech-archive"
+  }
+]

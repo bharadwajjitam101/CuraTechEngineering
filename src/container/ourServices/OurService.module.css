@@ -1,0 +1,220 @@
+/* Two Column Section */
+.serviceSection {
+    display: flex;
+    gap: 20px;
+    margin: 50px auto;
+    width: 90%;
+}
+
+.serviceContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    background-color: #f9f9f9;
+}
+
+/* Columns for Civil and Mechanical */
+.columnTop {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 50%;
+    gap: 10px;
+}
+
+.columnBottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    height: 50%;
+}
+
+.title {
+    font-size: 1.8rem;
+    color: #001d52;
+}
+
+.description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+}
+
+.offerSection h3 {
+    font-size: 1.5rem;
+    color: #d2153d;
+    margin-bottom: 10px;
+}
+
+.offerList {
+    list-style-type: disc;
+    margin-left: 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.imageContainer {
+    text-align: center;
+}
+
+.image {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Project Section */
+.projectSection {
+    margin: 50px auto;
+    width: 90%;
+}
+
+.projectTitle {
+    font-size: 2rem;
+    color: #001d52;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cardContainer {
+    display: flex;
+    gap: 20px; /* Slightly increased gap for better spacing */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 320px; /* Increased width */
+    padding: 20px; /* Added more padding for a balanced look */
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-top: 8px solid #b02636;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Add a slight hover effect for interactivity */
+}
+
+.company {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.card .description {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+.buttonContainer {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.slideButton {
+    background-color: #001d52;
+    color: white;
+    padding: 10px 18px; /* Increased padding for a larger button */
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    box-shadow: #000000;
+}
+
+.slideButton:hover {
+    background-color: #d2153d;
+    transform: translateY(-2px);
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 767px) {
+    .serviceSection {
+        flex-direction: column;
+        gap: 15px;
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .column {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .title {
+        font-size: 1.4rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .imageContainer {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .image {
+        width: 100%;
+        max-height: 180px;
+        object-fit: contain;
+        border-radius: 6px;
+    }
+
+    .projectSection {
+        margin: 20px auto;
+        width: 95%;
+    }
+
+    .projectTitle {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+
+    .cardContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+        padding: 15px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .company {
+        font-size: 1rem;
+    }
+
+    .buttonContainer {
+        text-align: center;
+    }
+
+    .slideButton {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+        border-radius: 4px;
+    }
+}

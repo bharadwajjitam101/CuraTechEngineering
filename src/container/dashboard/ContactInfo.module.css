@@ -1,0 +1,94 @@
+.mapBackground {
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Keeps the original height */
+    position: relative;
+    z-index: 1; /* Ensures the map stays at the back */
+}
+
+.addressBox {
+    position: absolute; /* Keeps the box over the map */
+    bottom: -4rem; /* Ensures it overlaps the map */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    padding: 20px;
+    width: 300px;
+    border-top: 5px solid #db191f;
+    border-radius: 8px;
+    box-shadow: 0px 6px 12px #00000026;
+    text-align: center;
+    z-index: 2; /* Keeps it above the map */
+}
+
+.addressAndDetails {
+    display: flex;
+    flex-wrap: wrap; /* Enables wrapping for smaller screens */
+    align-items: flex-start; /* Align items at the top */
+    justify-content: space-between; /* Space between address and details */
+    margin: 6rem auto 0; /* Adds margin to account for the map overlap */
+    gap: 16px;
+    max-width: 1200px;
+    position: relative; /* Maintains layout positioning */
+    z-index: 2;
+}
+
+.contactDetails {
+    flex: 1 1 300px; /* Matches the size of the address box */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 767px) {
+    .mapBackground {
+        height: 300px; /* Reduce height for smaller screens */
+    }
+
+    .addressBox {
+        width: 90%; /* Make the box adapt to smaller screen sizes */
+        padding: 15px;
+        bottom: -3rem; /* Adjust for reduced height */
+        font-size: 0.9rem; /* Slightly smaller text */
+    }
+
+    .addressAndDetails {
+        flex-direction: column; /* Stack items vertically */
+        gap: 20px; /* Add gap between elements */
+        margin-top: 8rem; /* Adjust margin for better spacing */
+    }
+
+    .contactDetails {
+        flex: 1 1 90%; /* Adjust to take up full width */
+        padding: 10px;
+        font-size: 0.9rem; /* Adjust font size */
+        margin-top: 3rem;
+    }
+}
+
+
+/* Tablet view */
+@media (max-width: 768px) {
+    .mapBackground {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+
+    .addressBox {
+        width: 260px; /* Smaller width for tablets */
+        bottom: -3rem;
+    }
+
+    .addressAndDetails {
+        gap: 12px; /* Reduce gap for compact layout */
+    }
+
+    .contactDetails {
+        flex: 1 1 calc(50% - 12px); /* Two boxes per row */
+    }
+}

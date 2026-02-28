@@ -1,0 +1,173 @@
+.special_projects_container {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+
+
+.sub_heading {
+    font-size: 1.2rem;
+    color: red;
+    font-weight: 500;
+}
+
+.special_projects_title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: -16px;
+}
+
+.second_col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    min-height: 480px;
+    align-items: stretch;
+}
+
+.project_card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project_card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.project_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hover_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #07072dcc;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.project_card:hover .hover_overlay {
+    opacity: 1;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+
+}
+
+.hover_overlay h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+
+
+}
+
+.hover_overlay p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: center;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+
+}
+
+.view_more_btn {
+    background: white;
+    color: blue;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease, color 0.3s ease;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+
+    
+}
+
+.view_more_btn:hover {
+    background: red;
+    color: white;
+}
+
+/* Responsiveness for tablets */
+@media (max-width: 768px) {
+    .special_projects_container {
+        padding: 15px;
+    }
+
+    .special_projects_title {
+        font-size: 3rem; /* Reduce title font size */
+    }
+
+    .second_col {
+        grid-template-columns: repeat(2, 1fr); /* Adjust grid for 2 columns */
+        gap: 16px; /* Reduce gap */
+    }
+
+    .hover_overlay h4 {
+        font-size: 1.25rem; /* Adjust heading size */
+    }
+
+    .hover_overlay p {
+        font-size: 0.9rem; /* Adjust text size */
+    }
+
+    .view_more_btn {
+        font-size: 0.9rem; /* Reduce button font size */
+        padding: 8px 16px; /* Adjust padding */
+    }
+}
+
+/* Responsiveness for mobile devices */
+@media (max-width: 480px) {
+    .special_projects_container {
+        padding: 10px;
+    }
+
+    .special_projects_title {
+        font-size: 2.5rem; /* Further reduce title font size */
+    }
+
+    .sub_heading {
+        font-size: 1rem; /* Reduce subheading size */
+    }
+
+    .second_col {
+        grid-template-columns: 1fr; /* Single column layout for mobile */
+    }
+
+    .project_card {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Adjust box shadow */
+    }
+
+    .hover_overlay h4 {
+        font-size: 1rem; /* Smaller heading */
+    }
+
+    .hover_overlay p {
+        font-size: 0.85rem; /* Smaller description text */
+    }
+
+    .view_more_btn {
+        font-size: 0.8rem; /* Smaller button */
+        padding: 6px 12px; /* Adjust padding */
+    }
+}

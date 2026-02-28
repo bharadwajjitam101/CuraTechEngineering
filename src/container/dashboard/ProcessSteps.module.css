@@ -1,0 +1,143 @@
+.section_container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    height: auto; /* Set to auto to adjust height for mobile */
+    padding-bottom: 2rem;
+    flex-wrap: wrap; 
+    transition: all 0.7s ease-in-out;
+}
+
+.section {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    padding: 1rem;
+    background-size: cover;
+    background-position: center;
+    transition: flex 0.7s ease-in-out, transform 0.7s ease-in-out;
+    overflow: visible;
+    z-index: 1;
+}
+
+.section:hover {
+    z-index: 2;
+}
+
+.section:first-child {
+    flex: 3;
+}
+
+.section:not(:first-child) {
+    flex: 1;
+}
+
+.section:not(:first-child):hover {
+    flex: 1.5;
+    transform: scale(1.05);
+}
+
+.content {
+    z-index: 2;
+    text-align: center;
+}
+
+.section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.section p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.arrow_container {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.arrow_btn {
+    background: #db191f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.arrow_btn:hover {
+    transform: scale(1.1);
+}
+
+.section:nth-child(3) .arrow_btn {
+    background: #00215b;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .section_container {
+        flex-direction: column; /* Stack sections vertically */
+    }
+
+    .section {
+        flex: 1;
+        height: auto; 
+        margin-bottom: 0rem; 
+    }
+
+    .content h3 {
+        font-size: 1.25rem; /* Slightly smaller font size for headings */
+        font-weight: bold;
+    }
+
+    .content p {
+        font-size: 0.8rem; /* Adjusted font size for paragraphs */
+    }
+
+    .arrow_container {
+        position: static;
+    }
+
+    .arrow_btn {
+        padding: 0.4rem;
+        font-size: 1.2rem;
+    }
+
+    .section img {
+        max-width: 100%; /* Ensure image fits the container */
+        height: auto;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+}
+
+
+/* Tablet and larger screens */
+@media (min-width: 768px) {
+    .section_container {
+        height: 500px;
+    }
+
+    .section h3 {
+        font-size: 2rem;
+    }
+
+    .section p {
+        font-size: 1.25rem;
+    }
+
+    .arrow_btn {
+        font-size: 1.75rem;
+        padding: 0.75rem;
+    }
+}

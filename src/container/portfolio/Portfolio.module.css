@@ -1,0 +1,11 @@
+.floatingContact {
+    background-color: #eaeaea;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: "Arial, sans-serif";
+    font-size: 50px;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}

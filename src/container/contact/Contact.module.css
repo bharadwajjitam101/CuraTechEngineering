@@ -1,0 +1,132 @@
+.mapContainer {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 50px 0;
+    padding: 0 20px;
+}
+
+.mapContainer iframe {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.contactInfoContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.contactWrapper {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.addressCard {
+    width: 40%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 8px solid #b02636;
+}
+
+.companyName {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.addressText {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #16213E;
+}
+
+.contactCard {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.contactCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.iconContainer {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+}
+
+.contactDetails {
+    flex-grow: 1;
+}
+
+.contactTitle {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contactNumbers {
+    color: #16213E;
+    font-size: 14px;
+}
+
+.contactNumbers div {
+    margin-bottom: 5px;
+}
+
+.actionContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+   
+.contactButton {
+    background-color: #001d52;
+    color: white;
+    padding: 12px 24px;
+    border: none;  
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.2s ease;
+    font-size: 1rem;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
+}
+
+.contactButton:hover {
+    background-color: #db191f;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4); /* Enhances shadow on hover */
+}
+
+ 
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contactWrapper {
+        flex-direction: column;
+    }
+
+    .addressCard,
+    .contactCard {
+        width: 100%;
+    }
+}
