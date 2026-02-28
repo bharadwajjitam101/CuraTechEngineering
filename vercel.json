@@ -1,0 +1,20 @@
+{
+  "buildCommand": "npm run build",
+  "framework": "vite",
+  "installCommand": "npm install",
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "functions": {
+    "api/**/*.js": {
+      "runtime": "nodejs20.x",
+      "memory": 3008,
+      "maxDuration": 60
+    }
+  },
+  "build": {
+    "env": {
+      "VITE_CHUNKSIZE": "300"
+    }
+  }
+}
